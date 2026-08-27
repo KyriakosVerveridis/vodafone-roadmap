@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vodafone Sales Roadmap</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<body>
+<div class="app">
+
+  <div class="topbar">
+    <div class="brand">
+      <div class="dot"></div>
+      <div>
+        <h1>Roadmap Πώλησης</h1>
+        <span>Vodafone · Κινητή &amp; Σταθερή</span>
+      </div>
+    </div>
+    <div class="scenario-select" id="scenarioSelect"></div>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="progress-label">
+      <span id="stepCounter">Βήμα 1</span>
+      <span id="stepName"></span>
+    </div>
+  </div>
+
+  <div class="rail" id="rail"></div>
+
+  <div class="card">
+    <div class="step-eyebrow" id="eyebrow"></div>
+    <h2 class="step-title" id="title"></h2>
+    <div class="step-body" id="body"></div>
+    <div class="nav-row">
+      <button class="btn ghost" id="backBtn">← Πίσω</button>
+      <button class="btn primary" id="nextBtn">Επόμενο βήμα →</button>
+    </div>
+  </div>
+
+</div>
+
+<div class="dock">
+  <button onclick="openSheet('objections')"><span class="ic">⚠️</span><span class="label">Ενστάσεις</span></button>
+  <button onclick="openSheet('docs')"><span class="ic">📎</span><span class="label">Δικαιολογητικά</span></button>
+  <button onclick="openSheet('prices')"><span class="ic">💶</span><span class="label">Τιμοκατάλογος</span></button>
+</div>
+
+<div class="overlay" id="overlay">
+  <div class="sheet">
+    <div class="sheet-head">
+      <h2 id="sheetTitle">—</h2>
+      <button onclick="closeSheet()">✕</button>
+    </div>
+    <div id="sheetTabsWrap"></div>
+    <div class="sheet-body" id="sheetBody"></div>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
